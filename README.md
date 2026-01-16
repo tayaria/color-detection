@@ -1,4 +1,4 @@
-Color Detection System
+# Color Detection System
 A real-time color detection application that identifies and tracks red, green, blue, and yellow colors using computer vision.
 Features
 
