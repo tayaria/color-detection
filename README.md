@@ -39,7 +39,7 @@ numpy>=1.19.0
 
 1. **Run the application**
 ```bash
-python color_detector.py
+python python detect_color.py
 ```
 
 2. **Point your camera** at colored objects (red, green, blue, or yellow)
