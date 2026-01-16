@@ -1,127 +1,142 @@
 # Color Detection System
-A real-time color detection application that identifies and tracks red, green, blue, and yellow colors using computer vision.
-Features
 
-Multi-Color Detection: Detects four primary colors (red, green, blue, and yellow)
-Real-Time Display: Live video feed with visual indicators showing detected colors
-Debug Information: Displays pixel count for each detected color
-Simple Interface: Easy-to-use keyboard controls
-Performance Optimized: Efficient processing for smooth real-time operation
+A real-time color detection application that identifies and tracks red, green, blue, and yellow colors using computer vision with OpenCV.
 
-Prerequisites
-Before running this project, ensure you have the following installed:
+## 🎨 Features
 
-Python 3.7 or higher
-pip (Python package installer)
-A working webcam or camera device
+- **Multi-Color Detection**: Automatically detects red, green, blue, and yellow colors
+- **Real-Time Processing**: Live video feed with instant color recognition
+- **Debug Information**: Displays pixel count for each detected color
+- **Simple Interface**: Minimalist design with keyboard controls
+- **Lightweight**: Efficient processing for smooth performance
 
-Installation
+## 📋 Prerequisites
 
-Clone the repository:
+- Python 3.7+
+- Webcam or camera device
+- pip package manager
 
-bashgit clone https://github.com/yourusername/color-detection-system.git
-cd color-detection-system
+## 🚀 Installation
 
-Install required dependencies:
-
-bashpip install -r requirements.txt
+1. **Clone the repository**
+```bash
+git clone https://github.com/tayaria/color-detection.git
+cd color-detection
 ```
 
-## Required Dependencies
-
-Create a `requirements.txt` file with the following packages:
+2. **Install dependencies**
+```bash
+pip install opencv-python numpy
 ```
+
+## 📦 Dependencies
+```txt
 opencv-python>=4.5.0
 numpy>=1.19.0
-Usage
-
-Run the main script:
-
-bashpython color_detector.py
 ```
 
-2. The application will open a window showing the live camera feed
+## 💻 Usage
 
-3. Point the camera at colored objects to detect:
-   - Red objects
-   - Green objects
-   - Blue objects
-   - Yellow objects
+1. **Run the application**
+```bash
+python color_detector.py
+```
 
-4. Debug information will be displayed on screen showing:
-   - Detected color name
-   - Pixel count for each color
+2. **Point your camera** at colored objects (red, green, blue, or yellow)
 
-5. Press `q` to quit the application
+3. **View real-time detection** with color names and pixel counts displayed on screen
 
-## How It Works
+4. **Press 'q'** to quit the application
 
-The application uses OpenCV's HSV (Hue, Saturation, Value) color space for accurate color detection:
+## 🎮 Controls
 
-1. **Capture**: Reads frames from the webcam
-2. **Convert**: Transforms RGB to HSV color space
-3. **Threshold**: Applies color range masks for each target color
-4. **Count**: Calculates the number of pixels for each color
-5. **Display**: Shows results with visual feedback
+| Key | Action |
+|-----|--------|
+| `q` | Quit application |
 
-## Project Structure
+## 🛠️ How It Works
+
+The system uses HSV (Hue, Saturation, Value) color space for accurate detection:
+
+1. Captures video frames from webcam
+2. Converts RGB to HSV color space
+3. Applies color range masks for target colors
+4. Counts pixels matching each color
+5. Displays results with visual feedback
+
+## 📁 Project Structure
 ```
 color-detection-system/
 │
-├── color_detector.py      # Main application script
-├── requirements.txt       # Python dependencies
-├── README.md             # Project documentation
-└── .gitignore           # Git ignore file
-Configuration
-You can adjust color detection sensitivity by modifying the HSV range values in the code:
-python# Example HSV ranges (Hue, Saturation, Value)
+├── color_detector.py      # Main application
+├── README.md             # Documentation
+├── .gitignore           # Git ignore rules
+```
+
+## ⚙️ Configuration
+
+Adjust HSV ranges in `color_detector.py` to fine-tune detection:
+```python
+# Example: Red color range
 lower_red = np.array([0, 120, 70])
 upper_red = np.array([10, 255, 255])
-Keyboard Controls
-KeyActionqQuit the application
-Troubleshooting
-Camera not detected
+```
 
-Ensure your webcam is properly connected
-Check camera permissions in your system settings
-Try changing the camera index in the code: cv2.VideoCapture(0) to cv2.VideoCapture(1)
+## 🐛 Troubleshooting
 
-Colors not detected accurately
+**Camera not detected?**
+- Check webcam connection and permissions
+- Try different camera index: `cv2.VideoCapture(1)`
 
-Adjust lighting conditions (avoid direct sunlight or very dim environments)
-Calibrate HSV ranges for your specific lighting setup
-Ensure the colored object occupies sufficient area in the frame
+**Inaccurate color detection?**
+- Improve lighting conditions
+- Calibrate HSV ranges for your environment
+- Ensure colored objects are clearly visible
 
-Performance issues
+**Performance issues?**
+- Lower camera resolution
+- Close resource-intensive applications
+- Update graphics drivers
 
-Lower the camera resolution
-Reduce frame processing rate
-Close other resource-intensive applications
+## 🤝 Contributing
 
-Contributing
 Contributions are welcome! Please follow these steps:
 
-Fork the repository
-Create a feature branch (git checkout -b feature/AmazingFeature)
-Commit your changes (git commit -m 'Add some AmazingFeature')
-Push to the branch (git push origin feature/AmazingFeature)
-Open a Pull Request
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/NewFeature`)
+3. Commit your changes (`git commit -m 'Add NewFeature'`)
+4. Push to the branch (`git push origin feature/NewFeature`)
+5. Open a Pull Request
 
-License
-This project is licensed under the MIT License - see the LICENSE file for details.
-Acknowledgments
+## 🔮 Future Enhancements
 
-OpenCV community for the powerful computer vision library
-Contributors and testers who helped improve the application
+- [ ] Additional color detection (orange, purple, etc.)
+- [ ] Bounding boxes around detected colors
+- [ ] Configuration file for custom HSV ranges
+- [ ] Video file input support
+- [ ] CSV export of detection results
+- [ ] Interactive HSV calibration tool
+- [ ] Multi-language support
 
-Contact
-Your Name - @yourtwitter
-Project Link: https://github.com/yourusername/color-detection-system
-Future Enhancements
+## 👤 Author
 
- Add more color detection options
- Implement color tracking with bounding boxes
- Add configuration file for custom HSV ranges
- Support for video file input
- Export detection results to CSV
- GUI for real-time HSV range adjustment
+**Aymen Tayari**
+- GitHub: [tayaria](https://github.com/tayaria/color-detection)
+- Email: aymentayari191@gmail.com
+
+## 🙏 Acknowledgments
+
+- OpenCV community
+- NumPy developers
+- All contributors and testers
+
+## 📸 Screenshots
+
+<img width="805" height="638" alt="image" src="https://github.com/user-attachments/assets/a97c1d84-1c83-437b-93e9-254e6adcd6a1" />
+
+<img width="797" height="637" alt="image" src="https://github.com/user-attachments/assets/ab640256-9b07-4225-bc30-02309d0acf09" />
+
+
+
+
+---
